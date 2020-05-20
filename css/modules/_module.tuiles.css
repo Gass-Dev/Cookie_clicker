@@ -1,0 +1,142 @@
+/* Selection toutes les div pour qu'elles aient les memes parametres */
+
+#buildings>div {
+    background: url(/assets/images/store-tile.jpg);
+    height: 65px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* ombrage blanc sur la tuile locked(bloque) */
+
+#buildings>div.locked:hover {
+    box-shadow: inset 0px 0px 15px 3px rgba(255, 255, 255, 1);
+    transition: 0.75s;
+}
+
+
+/* ombrage noir sur la tuile unlocked(débloque) */
+
+#buildings>div:hover:active {
+    box-shadow: inset 0px 0px 15px 4px rgb(0, 0, 0);
+    transition: 0.75s;
+}
+
+
+/* image de la tuile locked */
+
+#buildings>div .icon {
+    width: 58px;
+    height: 60px;
+}
+
+
+/* positions des elements */
+
+.cost {
+    font-family: 'merriweatherBold';
+    height: 5vh;
+    background: url(/assets/images/money.png) no-repeat;
+    font-size: 0.7em;
+    position: absolute;
+    margin-top: 35px;
+    margin-bottom: 0px;
+    margin-left: 70px;
+    padding-left: 25px;
+}
+
+.name {
+    font-family: 'merriweatherBold';
+    font-size: 1.3em;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+
+/* lock image sombre */
+
+#building-cursor.locked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: -65px 0px;
+}
+
+#building-grandma.locked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: -65px -65px;
+}
+
+#building-farm.locked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: -65px -195px;
+}
+
+#building-mine.locked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: -65px -260px;
+}
+
+#building-factory.locked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: -65px -325px;
+}
+
+
+/* unlock image colore */
+
+#building-cursor.unlocked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: 0px 0px;
+}
+
+#building-grandma.unlocked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: 0px -65px;
+}
+
+#building-farm.unlocked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: 0px -195px;
+}
+
+#building-mine.unlocked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: 0px -260px;
+}
+
+#building-factory.unlocked .icon {
+    background: url(/assets/images/buildings.png);
+    background-position: 0px -325px;
+}
+
+
+/* Color text cost desactive */
+
+.disabled .cost {
+    color: #ff6666;
+}
+
+
+/* Color fond assombrit active */
+
+.disabled {
+    filter: brightness(70%);
+    transition: filter 0.75s;
+}
+
+
+/* Color fond colore active */
+
+.enabled {
+    filter: brightness(100%);
+    transition: filter 0.75s;
+}
+
+
+/* Color text cost active */
+
+.enabled .cost {
+    color: #66FF66;
+}

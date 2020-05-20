@@ -1,0 +1,29 @@
+.numberClick {
+    font-size: 1.3em;
+    font-family: 'merriweatherBold';
+    animation: opacityClick 3s, moveClick 3s;
+}
+
+@keyframes opacityClick {
+    0% {
+        opacity: 100%;
+    }
+    20% {
+        opacity: 50%;
+    }
+    50% {
+        opacity: 20%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes moveClick {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-200px);
+    }
+}
